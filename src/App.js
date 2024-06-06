@@ -1,27 +1,16 @@
-import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  SimpleGrid,
-  theme,
-} from '@chakra-ui/react';
+import { BrowserRouter as Router, Routes, Route,} from "react-router-dom";
+import Box_dashboard from "./components/Box_dashboard.js"
 
-function App() {
-  const boxes = Array.from({ length: 500 }, (_, index) => (
-    <Box key={index} bg='tomato' height='40px'></Box>
-  ));
-
+function Landingpage() {
   return (
-    <ChakraProvider theme={theme}>
-      <SimpleGrid
-        columns={{ base: 4, sm: 5, md: 6, lg: 10, xl: 25 }}
-        spacing='1px'
-      >
-        {boxes}
-      </SimpleGrid>
-    </ChakraProvider>
+    <Router>
+
+      <Routes>
+      <Route path="/" element={<Box_dashboard />} />
+      </Routes>
+
+    </Router>
   );
 }
 
-export default App;
-
+export default Landingpage;
