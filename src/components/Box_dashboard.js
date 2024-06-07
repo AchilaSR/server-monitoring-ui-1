@@ -39,7 +39,7 @@ function Box_dashboard() {
   return (
     <ChakraProvider theme={theme}>
       <SimpleGrid
-        columns={{ base: 15, sm: 10, md: 15, lg: 20, xl: 25 }}
+        columns={{ base: 15, sm: 12, md: 15, lg: 22, xl: 25 }}
         spacing='3px'
       >
         {data.map((server) => (
@@ -64,7 +64,7 @@ function Box_dashboard() {
           >
             <Box
               bg={server.service_status === 1 ? 'green' : 'red'}
-              height='20px'
+              height={{ base: 5, sm: 10, md: 12, lg: 45, xl: 55 }}px
               display='flex'
               alignItems='center'
               justifyContent='center'
